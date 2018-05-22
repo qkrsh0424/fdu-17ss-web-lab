@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab07</title>
+  <style media="screen">
+  * {
+text-align: center;
+align-items: center;
+}
+
+select, button {
+width: 300px;
+}
+
+button {
+display: none;
+}
+
+input, option {
+padding: 0 0.5em;
+text-align: left;
+}
+
+table thead {
+background-color: grey;
+color: whitesmoke;
+}
+
+table {
+display: inline-block;
+border-width: 0;
+}
+
+tbody tr:nth-child(even) {
+background-color: lightgrey;
+}
+  </style>
+</head>
+<body>
+<form id="form" name="form">
+  <select id="select1" name="select1" title="SelectOne">
+    <option>SELECT ONE</option>
+    <option>CREATE TABLE</option>
+    <option>ADD ROW</option>
+    <option>DELETE ROW</option>
+    <option>DELETE TABLE</option>
+  </select>
+
+  <div id="create_inputs"></div>
+
+  <div id="inputs"></div>
+  <button type="button" id="commit">commit</button></br>
+  <select id="select2" name="select2" title="SelectTwo">
+    <option>
+      SELECT (default: last created)
+    </option>
+  </select>
+  <br/>
+</form>
+<div id="div_table"></div>
+</body>
+<script src="js/Lab07.js" type="text/javascript"></script>
+</html>
