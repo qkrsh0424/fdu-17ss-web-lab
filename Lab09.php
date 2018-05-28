@@ -42,8 +42,11 @@ include 'travel-data.inc.php';
               /* hint: use array and loop */
               //the next line is an example
               //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a> 
-
-
+				foreach ($countries as $countriesitem => $val) {
+					$rr = '<a href="list.php?country='.$countries[$countriesitem].'" role="button" class="btn btn-default">'.$countries[$countriesitem].'</a>';
+					echo $rr;
+				}
+			
               ?>
                      
         </div>               
@@ -71,6 +74,22 @@ include 'travel-data.inc.php';
    //              	</div>
    //              </a>
 			// </li>
+			foreach ($images as $imgesitem => $val) {
+
+				$rr = '<li>';
+				$rr .=	'<a href="detail.php?id='.$images[$imgesitem]["id"].'" class="img-responsive">';
+				$rr .= '<img src="images/square/'.$images[$imgesitem]["path"].'" alt="'.$images[$imgesitem]["title"].'">';
+				$rr .=	'<div class="caption">';
+				$rr .=	'<div class="blur"></div>';
+				$rr .=	'<div class="caption-text">';
+				$rr .=	'<h1>'.$images[$imgesitem]["title"].'';
+				$rr .= '</h1>';
+				$rr .= '</div>';
+				$rr .= '</div>';
+				$rr .= '</a>';
+				$rr .= '</li>';   
+				echo $rr;
+			}
           ?>
 
        </ul>       
